@@ -332,7 +332,7 @@ div.tocify {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="about.html">About</a>
+  <a href="cv_template.html">CV</a>
 </li>
 <li>
   <a href="palmer_penguins_cwiczenia.html">Pingwiny</a>
@@ -356,7 +356,7 @@ div.tocify {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-ok text-success"
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -367,8 +367,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-</a>
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -381,9 +381,9 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 1
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 0
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>zajecia/</code> <span
@@ -406,31 +406,36 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrong6b6d89e">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcom96246Stosikzajeciatreeb8507e9b723c2d34645b8cc5e890a81cac3227catargetblankb8507e9a">
 <span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>Repository version:</strong> 6b6d89e
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/96246-Stosik/zajecia/tree/b8507e9b723c2d34645b8cc5e890a81cac3227ca" target="_blank">b8507e9</a>
 </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrong6b6d89e"
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcom96246Stosikzajeciatreeb8507e9b723c2d34645b8cc5e890a81cac3227catargetblankb8507e9a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -439,7 +444,8 @@ and connecting the code version to the results is critical for
 reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version 6b6d89e.
+The results in this page were generated with repository version
+<a href="https://github.com/96246-Stosik/zajecia/tree/b8507e9b723c2d34645b8cc5e890a81cac3227ca" target="_blank">b8507e9</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -459,6 +465,7 @@ Ignored files:
 
 Unstaged changes:
     Modified:   analysis/_site.yml
+    Modified:   analysis/cv_template.Rmd
 
 </code></pre>
 <p>
@@ -506,10 +513,27 @@ Message
 <tbody>
 <tr>
 <td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/96246-Stosik/zajecia/b8507e9b723c2d34645b8cc5e890a81cac3227ca/docs/cv_template.html" target="_blank">b8507e9</a>
+</td>
+<td>
+96246-Stosik
+</td>
+<td>
+2025-12-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
 Rmd
 </td>
 <td>
-6b6d89e
+<a href="https://github.com/96246-Stosik/zajecia/blob/6b6d89e114632e4cd60b92e55390ec1da964f2f6/analysis/cv_template.Rmd" target="_blank">6b6d89e</a>
 </td>
 <td>
 96246-Stosik
@@ -526,7 +550,7 @@ Dodanie nowych analiz
 html
 </td>
 <td>
-6b6d89e
+<a href="https://rawcdn.githack.com/96246-Stosik/zajecia/6b6d89e114632e4cd60b92e55390ec1da964f2f6/docs/cv_template.html" target="_blank">6b6d89e</a>
 </td>
 <td>
 96246-Stosik
@@ -547,73 +571,59 @@ Dodanie nowych analiz
 </div>
 <div id="imię-nazwisko" class="section level1">
 <h1>Imię Nazwisko</h1>
-<p><strong>Email:</strong> <a href="mailto:twoj.email@example.com"
-class="email">twoj.email@example.com</a> <strong>Telefon:</strong> +48
-123 456 789 <strong>Lokalizacja:</strong> Miasto, Kraj</p>
+<p><strong>Email:</strong> <a href="mailto:96246@student.puls.edu.pl"
+class="email">96246@student.puls.edu.pl</a> <strong>Telefon:</strong>
++48 123 123 167 <strong>Lokalizacja:</strong> Nowy Lescz, Polska</p>
 <div id="podsumowanie" class="section level2">
 <h2>Podsumowanie</h2>
-<p>Krótki, zwięzły opis Twojego doświadczenia, umiejętności i celów
-zawodowych.</p>
+<p>Moje doświadczenie obejmuie wiele zakresów z dziedziny
+doświadczalnych wydarzeń mojego życia.</p>
 </div>
 <div id="doświadczenie-zawodowe" class="section level2">
 <h2>Doświadczenie zawodowe</h2>
-<div id="nazwa-stanowiska-firma" class="section level3">
-<h3>Nazwa Stanowiska | Firma</h3>
-<p><em>Okres zatrudnienia (np. Styczeń 2020 - Obecnie)</em></p>
+<div id="dyrektor-podoficerski-firmapol" class="section level3">
+<h3>Dyrektor PodOficerski | FirmaPol</h3>
+<p><em>Okres zatrudnienia (Styczeń 2012 - Obecnie)</em></p>
 <ul>
-<li>Kluczowe osiągnięcia i obowiązki</li>
-<li>Opis projektów i odpowiedzialności</li>
-<li>Wymierne efekty pracy (np. zwiększenie wydajności o X%)</li>
-</ul>
-</div>
-<div id="poprzednie-stanowisko-inna-firma" class="section level3">
-<h3>Poprzednie Stanowisko | Inna Firma</h3>
-<p><em>Okres zatrudnienia</em></p>
-<ul>
-<li>Główne zadania</li>
-<li>Osiągnięcia</li>
-<li>Zdobyte umiejętności</li>
+<li><p>Kluczowe osiągnięcia i obowiązki</p>
+<p>Polepszenie stanu firmy</p>
+<p>Opieka nad działaniem firmy</p></li>
+<li><p>Opis projektów i odpowiedzialności</p>
+<p>Opieka nad stanem opieki stanu projektów opieki nad stanem
+projektów</p></li>
 </ul>
 </div>
 </div>
 <div id="edukacja" class="section level2">
 <h2>Edukacja</h2>
-<div id="tytuł-studiów-nazwa-uczelni" class="section level3">
-<h3>Tytuł Studiów | Nazwa Uczelni</h3>
-<p><em>Rok ukończenia</em></p>
+<div id="nadzór-generalny-projektów-uniwerystet-eknomiczny-leszno"
+class="section level3">
+<h3>Nadzór Generalny Projektów| Uniwerystet Eknomiczny Leszno</h3>
+<p><em>1864</em></p>
 <ul>
-<li>Specjalizacja</li>
-<li>Średnia ocen</li>
-<li>Istotne osiągnięcia akademickie</li>
+<li>Nadzór Generalny Projektów</li>
+<li>4.7</li>
+<li>Najlepsza praca Magisterska Uczelni <em>(1864)</em></li>
 </ul>
 </div>
 </div>
 <div id="umiejętności" class="section level2">
 <h2>Umiejętności</h2>
 <ul>
-<li><strong>Techniczne:</strong> Python, R, SQL, Git</li>
-<li><strong>Miękkie:</strong> Komunikacja, praca zespołowa,
-rozwiązywanie problemów</li>
-<li><strong>Języki:</strong> Polski (ojczysty), Angielski (B2)</li>
+<li><strong>Języki programowania</strong> (różne)</li>
+<li><strong>Języki deprogramowania</strong> (inne)</li>
+<li><strong>Język</strong> Esperanto</li>
 </ul>
 </div>
 <div id="certyfikaty" class="section level2">
 <h2>Certyfikaty</h2>
 <ul>
-<li>Nazwa Certyfikatu, Instytucja, Rok</li>
-<li>Kolejny Certyfikat</li>
+<li>Generalne Mistrzostwo robienia hałasu, Międzynarodowa Rada Głośńych
+Dżwięków, 2024</li>
 </ul>
 </div>
 <div id="projekty" class="section level2">
 <h2>Projekty</h2>
-<div id="nazwa-projektu" class="section level3">
-<h3>Nazwa Projektu</h3>
-<ul>
-<li>Krótki opis</li>
-<li>Technologie użyte</li>
-<li>Link do repozytorium (opcjonalnie)</li>
-</ul>
-</div>
 </div>
 <div id="zainteresowania" class="section level2">
 <h2>Zainteresowania</h2>

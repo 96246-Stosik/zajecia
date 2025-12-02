@@ -57,30 +57,53 @@ Wszystkie możliwości prezentacji danych w formie tabeli można znaleźć na st
 Liczba pingwinów na wyspie:
   
 ```{r}
-
+ile <- penguins %>% 
+  count(island)
+kable(ile)  %>% 
+  kable_paper(c("striped", "hover"), full_width = F)
 ```
 
 Teraz znajdźmy średnią masę ciała pingwinów:
 ```{r}
+  sr_masa <- penguins %>% 
+  summarise(srednia = mean(body_mass_g, na.rm = TRUE))
 
+kable(sr_masa)  %>% 
+  kable_paper(c("striped", "hover"), full_width = F)
 ```
 
 Następnie znajdźmy średnią masy ciała w podziale na grupy (gatunki). Użyjemy funkcji 'group_by':
 
 ```{r}
+  sr_masa_g <- penguins %>% 
+  group_by(species) %>% 
+  summarise(srednia = mean(body_mass_g, na.rm = TRUE))
 
+kable(sr_masa_g)  %>% 
+  kable_paper(c("striped", "hover"), full_width = F)
 ```
 
 Co jeśli chcemy wyfiltrować tylko te pingwiny, które mają masę ciała mniejszą od średniej ich gatunku? 
 
 ```{r}
+  sr_masa_g <- penguins %>% 
+  group_by(species) %>% 
+  filter(body_mass_g < mean(body_mass_g, na.rm = TRUE))
 
+kable(sr_masa_g)  %>% 
+  kable_paper(c("striped", "hover"), full_width = F)
 ```
 
 Dalej, jeśli chcemy ułożyć pingwiny, które mają mniejszą masę ciała niż średnia ich gatunku, w określonej kolejności (użyjemy funkcji 'arrange' z funkcją 'desc'):
 
 ```{r}
+  sr_masa_g <- penguins %>% 
+  group_by(species) %>% 
+  filter(body_mass_g < mean(body_mass_g, na.rm = TRUE)) %>% 
+  arrange(desc(body_mass_g))
 
+kable(sr_masa_g)  %>% 
+  kable_paper(c("striped", "hover"), full_width = F)
 ```
 
 ## Podstawowe wykresy
@@ -94,12 +117,20 @@ library(ggplot2)
 Na początek stworzymy podstawowy wykres rozrzutu przedstawiający zmienność masy ciała w odniesieniu do długości płetwy pingwina:
 
 ```{r}
-
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  labs(title = "Masa ciała a długość płetwy",
+       x = "Długość płetwy",
+       y = "Masa ciała")
 ```
 
 Następnie narysujemy wykres liniowy przedstawiający zmienność masy ciała w odniesieniu do długości płetwy pingwina:
 ```{r}
-
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_line() +
+  labs(title = "Zależność masy ciała od długości płetwy",
+       x = "Długość płetwy",
+       y = "Masa ciała")
 ```
 
 Dalej, stworzymy wykres słupkowy i histogram. Na wykresie słupkowym każdy punkt danych jest reprezentowany przez słupek, którego długość jest proporcjonalna do reprezentowanej wartości.
@@ -108,9 +139,18 @@ Wykres słupkowy i histogram przedstawiają liczbę pingwinów o danej masie cia
 
 ```{r}
 # Histogram masy ciała
-
+ggplot(penguins, aes(x = body_mass_g)) +
+  geom_histogram(binwidth = 200, fill = "orange", color = "black") +
+  labs(title = "Histogram masy ciała pingwinów",
+       x = "Masa ciała (g)",
+       y = "Liczba pingwinów")
 
 # Wykres słupkowy gatunków
+ggplot(penguins, aes(x = species)) +
+  geom_bar(fill = "violet", color = "black") +
+  labs(title = "Liczba pingwinów według gatunku",
+       x = "Gatunek",
+       y = "Liczba")
 
 ```
 
@@ -118,10 +158,25 @@ Wykres słupkowy i histogram przedstawiają liczbę pingwinów o danej masie cia
 Aby dodać odrobinę koloru, włączamy parametr koloru w nawiasach estetyki, gdzie punkty są podświetlane w zależności od gatunku pingwinów:
 
 ```{r}
-
+ggplot(penguins, aes(x = flipper_length_mm, 
+                     y = body_mass_g, 
+                     color = species)) +
+  geom_point() +
+  labs(title = "Masa ciała a długość płetwy – kolor wg gatunku",
+       x = "Długość płetwy",
+       y = "Masa ciała")
 ```
 
 Podobnie możemy zmienić rozmiar punktów na podstawie poziomów kolumny czynnikowej. Jeśli chcemy pójść jeszcze dalej, możemy zmienić kształt punktu na podstawie poziomów kolumny czynnikowej:
 ```{r}
-
+ggplot(penguins, aes(x = flipper_length_mm, 
+                     y = body_mass_g,
+                     color = species,
+                     shape = species,
+                     size = bill_length_mm)) +
+  geom_point() +
+  labs(title = "Wielowymiarowy wykres punktowy",
+       x = "Długość płetwy",
+       y = "Masa ciała",
+       size = "Długość dzioba")
 ```

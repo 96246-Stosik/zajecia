@@ -1,54 +1,51 @@
 # Imię Nazwisko
 
-**Email:** twoj.email@example.com
-**Telefon:** +48 123 456 789
-**Lokalizacja:** Miasto, Kraj
+**Email:** 96246@student.puls.edu.pl
+**Telefon:** +48 123 123 167
+**Lokalizacja:** Nowy Lescz, Polska
 
 ## Podsumowanie
-Krótki, zwięzły opis Twojego doświadczenia, umiejętności i celów zawodowych.
+
+Moje doświadczenie obejmuie wiele zakresów z dziedziny doświadczalnych wydarzeń mojego życia.
 
 ## Doświadczenie zawodowe
 
-### Nazwa Stanowiska | Firma
-*Okres zatrudnienia (np. Styczeń 2020 - Obecnie)*
+### Dyrektor PodOficerski | FirmaPol
+*Okres zatrudnienia (Styczeń 2012 - Obecnie)*
 
 - Kluczowe osiągnięcia i obowiązki
+  
+  Polepszenie stanu firmy
+  
+  Opieka nad działaniem firmy
+  
+  
 - Opis projektów i odpowiedzialności
-- Wymierne efekty pracy (np. zwiększenie wydajności o X%)
 
-### Poprzednie Stanowisko | Inna Firma
-*Okres zatrudnienia*
+  Opieka nad stanem opieki stanu projektów opieki nad stanem projektów
 
-- Główne zadania
-- Osiągnięcia
-- Zdobyte umiejętności
 
 ## Edukacja
 
-### Tytuł Studiów | Nazwa Uczelni
-*Rok ukończenia*
+### Nadzór Generalny Projektów| Uniwerystet Eknomiczny Leszno
+*1864*
 
-- Specjalizacja
-- Średnia ocen
-- Istotne osiągnięcia akademickie
+- Nadzór Generalny Projektów
+- 4.7
+- Najlepsza praca Magisterska Uczelni *(1864)*
 
 ## Umiejętności
 
-- **Techniczne:** Python, R, SQL, Git
-- **Miękkie:** Komunikacja, praca zespołowa, rozwiązywanie problemów
-- **Języki:** Polski (ojczysty), Angielski (B2)
+- **Języki programowania** (różne)
+- **Języki deprogramowania** (inne)
+- **Język** Esperanto
 
 ## Certyfikaty
 
-- Nazwa Certyfikatu, Instytucja, Rok
-- Kolejny Certyfikat
+- Generalne Mistrzostwo robienia hałasu, Międzynarodowa Rada Głośńych Dżwięków, 2024
 
 ## Projekty
 
-### Nazwa Projektu
-- Krótki opis
-- Technologie użyte
-- Link do repozytorium (opcjonalnie)
 
 ## Zainteresowania
 
